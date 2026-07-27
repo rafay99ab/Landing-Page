@@ -1,0 +1,359 @@
+/* ===== ContactSection.css ===== */
+/* All class names are unique — prefixed with "contact-" */
+
+.contact-outer {
+  width: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Inner Container ===== */
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+}
+
+/* ===== Section Header ===== */
+.contact-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-emblem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.contact-emblem-shape {
+  width: 24px;
+  height: 24px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.contact-emblem-bar {
+  width: 3px;
+  height: 9px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.contact-emblem-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+font-family: 'Poppins', sans-serif
+}
+
+.contact-headline {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  text-align: left;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Main Layout ===== */
+.contact-layout {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ===== Left - Form ===== */
+.contact-form {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-group-full {
+  width: 100%;
+}
+
+.contact-form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  text-align: left;
+font-family: 'Poppins', sans-serif
+}
+
+.contact-required {
+  color: #ef4444;
+}
+
+.contact-form-input,
+.contact-form-select,
+.contact-form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 13px;
+font-family: 'Poppins', sans-serif;
+  color: #111827;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+  color: #b0b0b0;
+}
+
+.contact-form-input:focus,
+.contact-form-select:focus,
+.contact-form-textarea:focus {
+  border-color: #a3e635;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+}
+
+.contact-form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Custom Select */
+.contact-select-wrap {
+  position: relative;
+}
+
+.contact-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  color: #9ca3af;
+}
+
+.contact-form-select option {
+  color: #111827;
+}
+
+.contact-form-select option:first-child {
+  color: #9ca3af;
+}
+
+.contact-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Submit Button */
+.contact-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f3a2f;
+  color: #a3e635;
+  font-size: 13px;
+  font-weight: 600;
+font-family: 'Poppins', sans-serif;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.contact-submit-btn:hover {
+  background-color: #2d4f3f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 58, 47, 0.3);
+}
+
+/* ===== Right - Image ===== */
+.contact-visual {
+  flex: 0 0 40%;
+  position: relative;
+}
+
+.contact-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.contact-visual:hover .contact-img {
+  filter: grayscale(0%);
+}
+
+/* Sparkles */
+.contact-sparkle {
+  position: absolute;
+  color: #a3e635;
+  z-index: 2;
+}
+
+.contact-sparkle-a {
+  bottom: 60px;
+  right: -10px;
+  font-size: 28px;
+}
+
+.contact-sparkle-b {
+  bottom: 30px;
+  right: 25px;
+  font-size: 18px;
+}
+
+/* ===== Bottom Marquee ===== */
+.contact-marquee {
+  width: 100%;
+  background-color: #1a2e25;
+  overflow: hidden;
+  padding: 14px 0;
+}
+
+.contact-marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: contact-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.contact-marquee-word {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+font-family: 'Poppins', sans-serif;
+  padding: 0 24px;
+  letter-spacing: 0.3px;
+}
+
+.contact-marquee-star {
+  font-size: 22px;
+  color: #a3e635;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+@keyframes contact-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.contact-marquee:hover .contact-marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .contact-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form,
+  .contact-visual {
+    flex: none;
+    width: 100%;
+  }
+
+  .contact-img-wrap {
+    min-height: 300px;
+  }
+
+  .contact-headline {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-inner {
+    padding: 60px 24px 40px;
+  }
+
+  .contact-headline {
+    font-size: 26px;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-img-wrap {
+    min-height: 250px;
+  }
+
+  .contact-marquee-word {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .contact-marquee-star {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-headline {
+    font-size: 22px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+  }
+
+  .contact-sparkle-a {
+    font-size: 22px;
+    right: 5px;
+  }
+
+  .contact-sparkle-b {
+    font-size: 14px;
+    right: 30px;
+  }
+}

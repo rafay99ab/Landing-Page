@@ -1,0 +1,308 @@
+/* ===== WorkProcessSection.css ===== */
+/* All class names are unique — prefixed with "workprocess-" */
+
+.workprocess-outer {
+  width: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Marquee Strips ===== */
+.workprocess-marquee-top,
+.workprocess-marquee-bottom {
+  width: 100%;
+  background-color: #1a2e25;
+  overflow: hidden;
+  padding: 14px 0;
+}
+
+.workprocess-marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: workprocess-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.workprocess-marquee-word {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+font-family: 'Poppins', sans-serif;
+  padding: 0 24px;
+  letter-spacing: 0.3px;
+}
+
+.workprocess-marquee-asterisk {
+  font-size: 22px;
+  color: #a3e635;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+@keyframes workprocess-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.workprocess-marquee-top:hover .workprocess-marquee-track,
+.workprocess-marquee-bottom:hover .workprocess-marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== Main Content ===== */
+.workprocess-main {
+  padding: 70px 0;
+}
+
+.workprocess-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Header Row ===== */
+.workprocess-headerrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.workprocess-headerleft {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workprocess-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workprocess-badge-shape {
+  width: 24px;
+  height: 24px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.workprocess-badge-bar {
+  width: 3px;
+  height: 9px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.workprocess-badge-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+font-family: 'Poppins', sans-serif
+}
+
+.workprocess-headline {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.workprocess-desc {
+  font-size: 15px;
+  color: #9ca3af;
+  text-align: left;
+  line-height: 1.7;
+  max-width: 400px;
+font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+}
+
+/* ===== Process Cards ===== */
+.workprocess-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.workprocess-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.workprocess-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.workprocess-card-body {
+  padding: 28px 24px 20px;
+  position: relative;
+  min-height: 140px;
+}
+
+.workprocess-card-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+font-family: 'Poppins', sans-serif
+}
+
+.workprocess-card-text {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.6;
+  text-align: left;
+font-family: 'Poppins', sans-serif
+}
+
+/* Large watermark number */
+.workprocess-card-watermark {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 72px;
+  font-weight: 800;
+  color: #f3f4f6;
+font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Card Footer */
+.workprocess-card-footer {
+  background-color: #1f3a2f;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Diagonal lines in footer */
+.workprocess-card-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.04) 6px,
+    rgba(255, 255, 255, 0.04) 7px
+  );
+  pointer-events: none;
+}
+
+.workprocess-footer-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.workprocess-footer-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: #a3e635;
+font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .workprocess-headline {
+    font-size: 32px;
+  }
+
+  .workprocess-cards {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .workprocess-main {
+    padding: 50px 0;
+  }
+
+  .workprocess-headerrow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .workprocess-headline {
+    font-size: 28px;
+  }
+
+  .workprocess-desc {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .workprocess-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .workprocess-card {
+    flex: none;
+  }
+
+  .workprocess-marquee-word {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .workprocess-marquee-asterisk {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workprocess-headline {
+    font-size: 24px;
+  }
+
+  .workprocess-card-body {
+    padding: 24px 20px 16px;
+  }
+
+  .workprocess-card-footer {
+    padding: 12px 20px;
+  }
+
+  .workprocess-card-watermark {
+    font-size: 56px;
+  }
+}

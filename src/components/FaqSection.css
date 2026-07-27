@@ -1,0 +1,369 @@
+/* ===== FaqSection.css ===== */
+/* All class names are unique — prefixed with "faq-" */
+
+.faq-outer {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Section Header ===== */
+.faq-top {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.faq-emblem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.faq-emblem-shape {
+  width: 24px;
+  height: 24px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.faq-emblem-bar {
+  width: 3px;
+  height: 9px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.faq-emblem-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+font-family: 'Poppins', sans-serif;
+}
+
+.faq-headline {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  text-align: left;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Main Layout ===== */
+.faq-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* ===== Left - Accordion ===== */
+.faq-accordion {
+  flex: 0 0 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item-open {
+  background-color: #1f3a2f;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.faq-question {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+font-family: 'Poppins', sans-serif;
+  flex: 1;
+}
+
+.faq-item-open .faq-question {
+  color: #ffffff;
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.faq-item-open .faq-icon {
+  color: #ffffff;
+}
+
+/* Answer */
+.faq-answerwrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answerwrap-open {
+  max-height: 200px;
+}
+
+.faq-answer {
+  padding: 0 20px 16px;
+  font-size: 13px;
+  color: #a7b5ad;
+  text-align: left;
+  line-height: 1.6;
+font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Right - Side Column ===== */
+.faq-sidecol {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Contact Card */
+.faq-contactcard {
+  background-color: #2a4538;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.faq-diag {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.05) 6px,
+    rgba(255, 255, 255, 0.05) 7px
+  );
+}
+
+.faq-diag-top {
+  top: 0;
+}
+
+.faq-diag-bottom {
+  bottom: 0;
+}
+
+.faq-contactbody {
+  padding: 35px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-chaticon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-chaticon svg {
+  color: #a3e635;
+  width: 40px;
+  height: 40px;
+}
+
+.faq-chatdots {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  color: #a3e635;
+  font-size: 14px;
+  font-weight: 700;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.faq-contacttitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+font-family: 'Poppins', sans-serif;
+}
+
+.faq-contacttext {
+  font-size: 12px;
+  color: #8fa89a;
+  line-height: 1.6;
+font-family: 'Poppins', sans-serif;
+text-align: left;
+}
+
+.faq-contactbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bef264;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 600;
+font-family: 'Poppins', sans-serif;
+  padding: 10px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.faq-contactbtn:hover {
+  background-color: #a3e635;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(163, 230, 53, 0.3);
+}
+
+/* Service Card */
+.faq-servicecard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.faq-serviceicon {
+  width: 48px;
+  height: 48px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+.faq-servicetext {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.faq-servicetag {
+  font-size: 11px;
+  color: #9ca3af;
+font-family: 'Poppins', sans-serif;
+text-align: left;
+}
+
+.faq-servicetitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  text-align: left;
+font-family: 'Poppins', sans-serif;
+}
+
+.faq-servicephone {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: left;
+font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .faq-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .faq-accordion,
+  .faq-sidecol {
+    flex: none;
+    width: 100%;
+  }
+
+  .faq-headline {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-outer {
+    padding: 60px 0;
+  }
+
+  .faq-headline {
+    font-size: 26px;
+  }
+
+  .faq-trigger {
+    padding: 14px 16px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+  }
+
+  .faq-answer {
+    padding: 0 16px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-headline {
+    font-size: 22px;
+  }
+
+  .faq-contactbody {
+    padding: 28px 20px;
+  }
+
+  .faq-servicecard {
+    padding: 18px 16px;
+  }
+}

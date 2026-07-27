@@ -1,0 +1,256 @@
+/* ===== AwardsSection.css ===== */
+/* All class names are unique — prefixed with "awards-" */
+
+.awards-outer {
+  width: 100%;
+  background-color: #2a4538;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Diagonal line decorations */
+.awards-diag-top,
+.awards-diag-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 7px,
+    rgba(255, 255, 255, 0.06) 7px,
+    rgba(255, 255, 255, 0.06) 8px
+  );
+}
+
+.awards-diag-top {
+  top: 0;
+}
+
+.awards-diag-bottom {
+  bottom: 0;
+}
+
+/* ===== Container ===== */
+.awards-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.awards-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ===== Left Column ===== */
+.awards-leftcol {
+  flex: 0 0 45%;
+}
+
+.awards-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.awards-badge-shape {
+  width: 24px;
+  height: 24px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.awards-badge-bar {
+  width: 3px;
+  height: 9px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.awards-badge-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a7b5ad;
+font-family: 'Poppins', sans-serif
+}
+
+.awards-headline {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+font-family: 'Poppins', sans-serif;
+text-align: left;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+
+/* Laurel Wreath */
+.awards-wreath {
+  width: 280px;
+  height: 280px;
+}
+
+.awards-wreath-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Right Column ===== */
+.awards-rightcol {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+/* Award Row */
+.awards-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.awards-row:first-child {
+  padding-top: 0;
+}
+
+.awards-row:hover {
+  border-bottom-color: rgba(163, 230, 53, 0.3);
+}
+
+.awards-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.awards-row-cat {
+  font-size: 13px;
+  color: #8fa89a;
+  text-align: left;
+font-family: 'Poppins', sans-serif
+}
+
+.awards-row-main {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.awards-row-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+font-family: 'Poppins', sans-serif
+}
+
+.awards-row-year {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a3e635;
+font-family: 'Poppins', sans-serif
+}
+
+/* Arrow Circle */
+.awards-row-arrow {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.awards-row:hover .awards-row-arrow {
+  background-color: #a3e635;
+  color: #1a1a1a;
+  border-color: #a3e635;
+  transform: rotate(45deg);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .awards-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .awards-leftcol,
+  .awards-rightcol {
+    flex: none;
+    width: 100%;
+  }
+
+  .awards-headline {
+    font-size: 30px;
+  }
+
+  .awards-wreath {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .awards-rightcol {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-outer {
+    padding: 60px 0;
+  }
+
+  .awards-headline {
+    font-size: 26px;
+  }
+
+  .awards-row-name {
+    font-size: 16px;
+  }
+
+  .awards-wreath {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-headline {
+    font-size: 22px;
+  }
+
+  .awards-row {
+    padding: 18px 0;
+  }
+
+  .awards-row-main {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .awards-row-arrow {
+    width: 32px;
+    height: 32px;
+  }
+}

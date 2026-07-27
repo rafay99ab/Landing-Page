@@ -1,0 +1,184 @@
+/* ===== NewsletterSection.css ===== */
+
+.nl-wrap {
+  width: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Marquee ===== */
+.nl-marq {
+  width: 100%;
+  background-color: #1a2e25;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.nl-marq-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: nl-scroll 25s linear infinite;
+  width: max-content;
+}
+
+.nl-marq-txt {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+font-family: 'Poppins', sans-serif;
+  padding: 0 22px;
+}
+
+.nl-marq-star {
+  font-size: 20px;
+  color: #a3e635;
+  padding: 0 18px;
+}
+
+@keyframes nl-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.nl-marq:hover .nl-marq-track {
+  animation-play-state: paused;
+}
+
+/* ===== Main Content ===== */
+.nl-main {
+  padding: 60px 24px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nl-emblem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.nl-emblem-shape {
+  width: 24px;
+  height: 24px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.nl-emblem-bar {
+  width: 3px;
+  height: 9px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.nl-emblem-lbl {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+font-family: 'Poppins', sans-serif;
+}
+
+.nl-head {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  text-align: left;
+  line-height: 1.2;
+font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 28px;
+}
+
+/* ===== Form ===== */
+.nl-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nl-inputbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 4px 4px 4px 14px;
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.nl-inputbox:focus-within {
+  border-color: #a3e635;
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+}
+
+.nl-mailicon {
+  width: 32px;
+  height: 32px;
+  background-color: #bef264;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+.nl-input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+font-family: 'Poppins', sans-serif;
+  color: #111827;
+  width: 200px;
+  background: transparent;
+}
+
+.nl-input::placeholder {
+  color: #b0b0b0;
+}
+
+.nl-btn {
+  background-color: #1f3a2f;
+  color: #a3e635;
+  font-size: 13px;
+  font-weight: 600;
+font-family: 'Poppins', sans-serif;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nl-btn:hover {
+  background-color: #2d4f3f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 58, 47, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nl-head { font-size: 26px; }
+  .nl-main { padding: 45px 20px; }
+  .nl-form { flex-direction: column; }
+  .nl-inputbox { width: 100%; max-width: 320px; }
+  .nl-input { flex: 1; }
+  .nl-btn { width: 100%; max-width: 320px; }
+}
+
+@media (max-width: 480px) {
+  .nl-head { font-size: 22px; }
+  .nl-marq-txt { font-size: 15px; padding: 0 16px; }
+  .nl-marq-star { font-size: 18px; padding: 0 14px; }
+}

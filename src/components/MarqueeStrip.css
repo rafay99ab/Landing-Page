@@ -1,0 +1,84 @@
+/* ===== MarqueeStrip.css ===== */
+
+.marquee-section {
+  width: 100%;
+  background-color: #1a2e25; /* Dark green background */
+  overflow: hidden;
+  padding: 18px 0;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-scroll 25s linear infinite;
+  width: max-content;
+}
+
+.marquee-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+  letter-spacing: 0.3px;
+}
+
+.marquee-star {
+  font-size: 24px;
+  color: #a3e635; /* Lime green star */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .marquee-star {
+    font-size: 20px;
+    padding: 0 16px;
+  }
+
+  .marquee-track {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-text {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .marquee-star {
+    font-size: 18px;
+    padding: 0 12px;
+  }
+}

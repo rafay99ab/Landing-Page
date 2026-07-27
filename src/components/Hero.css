@@ -1,0 +1,420 @@
+/* ===== HeroSection.css ===== */
+
+.hero-section {
+  width: 100%;
+  min-height: 70vh;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Dots Pattern */
+.dots {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(circle, #d1d5db 2px, transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.5;
+}
+
+.dots-top-right {
+  top: 40px;
+  right: 60px;
+}
+
+.dots-bottom-left {
+  bottom: 60px;
+  left: 40px;
+}
+
+/* ===== Container ===== */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Left Content ===== */
+.hero-content {
+  flex: 0 0 45%;
+  max-width: 500px;
+}
+
+/* Brand Badge */
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.badge-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.badge-bar {
+  width: 3px;
+  height: 10px;
+  background-color: #1a1a1a;
+  border-radius: 1px;
+}
+
+.badge-bar-1 {
+  height: 8px;
+}
+
+.badge-bar-2 {
+  height: 12px;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+  text-align: left;
+  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* Description */
+.hero-description {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 32px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1f3a2f;
+  color: #a3e635;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2d4f3f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 58, 47, 0.3);
+}
+
+.arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btn-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #1f3a2f;
+}
+
+/* ===== Right Content - Image Collage ===== */
+.hero-images {
+  flex: 0 0 50%;
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.img-wrapper:hover img {
+  filter: grayscale(0%);
+}
+
+/* Image 1 - Top Right Tall */
+.img-1 {
+  width: 160px;
+  height: 280px;
+  top: 0;
+  right: 20px;
+  border-radius: 20px 20px 20px 60px;
+  z-index: 3;
+}
+
+/* Image 2 - Middle Left */
+.img-2 {
+  width: 180px;
+  height: 220px;
+  top: 80px;
+  left: 40px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* Image 3 - Middle Right */
+.img-3 {
+  width: 200px;
+  height: 140px;
+  top: 160px;
+  right: 60px;
+  border-radius: 20px;
+  z-index: 4;
+  border: 4px solid #f5f5f5;
+}
+
+/* Image 4 - Bottom Right */
+.img-4 {
+  width: 200px;
+  height: 140px;
+  bottom: 40px;
+  right: 60px;
+  border-radius: 20px;
+  z-index: 4;
+  border: 4px solid #f5f5f5;
+}
+
+/* Hire Us Badge */
+.hire-badge {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+}
+
+.hire-badge-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #1f3a2f;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #a3e635;
+  position: relative;
+}
+
+.hire-badge-inner::before {
+  content: 'HIRE US';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-15deg);
+  font-size: 8px;
+  font-weight: 700;
+  color: #1f3a2f;
+  background-color: #a3e635;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.hire-badge-inner::after {
+  content: 'HIRE US';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(15deg);
+  font-size: 8px;
+  font-weight: 700;
+  color: #1f3a2f;
+  background-color: #a3e635;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+.hire-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f3a2f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hire-text {
+  font-size: 9px;
+  font-weight: 700;
+  color: #a3e635;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  color: #a3e635;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.sparkle-1 {
+  bottom: 60px;
+  right: 20px;
+  font-size: 28px;
+}
+
+.sparkle-2 {
+  bottom: 30px;
+  right: 50px;
+  font-size: 18px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .brand-badge {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-images {
+    flex: none;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-images {
+    height: 350px;
+  }
+
+  .img-1 {
+    width: 120px;
+    height: 200px;
+    right: 10px;
+  }
+
+  .img-2 {
+    width: 140px;
+    height: 170px;
+    left: 20px;
+  }
+
+  .img-3 {
+    width: 150px;
+    height: 110px;
+    right: 30px;
+  }
+
+  .img-4 {
+    width: 150px;
+    height: 110px;
+    right: 30px;
+  }
+
+  .hire-badge {
+    width: 60px;
+    height: 60px;
+    left: 50px;
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero-images {
+    height: 300px;
+  }
+}
